@@ -12,7 +12,7 @@ function SearchBar({ onSearch }) {
 
   return (
     <div className='flex items-center justify-center bg-background mt-8'>
-    <div className='flex border border-background rounded outline-none p-4 w-40'>
+    <div className='flex border border-background rounded outline-none p-4 min-w-40'>
    <img src='images/icons8-search-25.png' alt='search icon' className='mr-4'/>
     <input
       className="flex-grow outline-none"
