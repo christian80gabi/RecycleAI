@@ -14,12 +14,13 @@ def register(request: HttpRequest) -> JsonResponse:
     
     if request.method == 'POST':
         # is_authorized: bool = services.check_authorization(request)
+        print('REGISTERING....')
         response = services.register(request)
     else:
         response.status_code = 405
     
     if request.method == 'GET':
-        raise NotImplementedError
+        response.status_code = 404
     
     return response
 
@@ -31,12 +32,13 @@ def sign_in(request: HttpRequest) -> JsonResponse:
 
     if request.method == 'POST':
         # is_authorized: bool = services.check_authorization(request)
+        print('SIGNING IN....')
         response = services.sign_in(request)
     else:
         response.status_code = 405
     
     if request.method == 'GET':
-        response.status_code = 403
+        response.status_code = 404
     
     return response
 
@@ -48,7 +50,7 @@ def recommend_waste_company(request: HttpRequest) -> JsonResponse:
 
     if request.method == 'POST':
         # is_authorized: bool = services.check_authorization(request)
-        response = services.recommend_waste_company(request)
+        response = services.process_image(request)
     else:
         response.status_code = 405
     
