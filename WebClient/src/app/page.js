@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <main className="min-h-screen max-w-5xl mx-auto flex-col pt-12 px-12">
+    <main className="min-h-screen max-w-5xl mx-auto flex-col py-12 px-12">
       <div className="flex items-center">
         <Image
           src={avatar}
@@ -53,11 +53,11 @@ export default function Home() {
       </div>
       <div className="mt-16">
         <h3 className="font-medium text-neutral-500 text-lg">Recycling Tips</h3>
-        <div className="mt-4 flex items-center gap-x-2">
-          <p className="w-1/3 text-xl">
+        <div className="mt-4 flex min-[750px]:items-center flex-col min-[750px]:flex-row gap-x-3">
+          <p className="min-[750px]:w-1/3 text-xl mb-4 min-[750px]:mb-0">
             Get to know some of our favorite ways to recycle.
           </p>
-          <div className="flex flex-col sm:flex-row gap-x-4 overflow-auto">
+          <div className="flex gap-x-4 overflow-auto">
             {[
               { name: "Paper", src: crumpledPaper },
               { name: "Bottle", src: bottle },
