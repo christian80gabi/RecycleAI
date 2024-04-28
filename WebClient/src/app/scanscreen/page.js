@@ -14,7 +14,7 @@ export default function page() {
       <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
       <div className="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
         <div className="text-center">
-          <h2 className="mt-5 text-3xl font-bold text-gray-900">Scan your waste with AI</h2>
+          <h2 className="mt-5 text-3xl font-bold text-[#151D07]">Scan your waste with AI</h2>
           <p className="mt-2 text-sm text-gray-400">
             Insert the image you want to scan with AI
           </p>
@@ -35,15 +35,15 @@ export default function page() {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
                     />
                   </svg>
                   <div id="input-file" className="flex flex-auto max-h-48 w-2/5 mx-auto -mt-10">
                     <Image
-                      classNameName="has-mask h-36 object-center"
+                      className=" h-36 object-cover"
                       src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg"
                       alt="freepik image"
                       width={300}
@@ -64,12 +64,12 @@ export default function page() {
             </div>
           </div>
           <p className="text-sm text-gray-300">
-            <span>File type: types of images</span>
+            <span>File type: JPG, PNG</span>
           </p>
           <div>
             <button
               type="submit"
-              className="my-5 w-full flex justify-center bg-green-700 text-gray-100 p-4  rounded-full tracking-wide
+              className="my-5 w-full flex justify-center bg-[#A2D544] text-[#151D07] p-4  rounded-full tracking-wide
                                     font-semibold  focus:outline-none focus:shadow-outline hover:bg-green-600 shadow-lg cursor-pointer transition ease-in duration-300"
             >
               Scan now
