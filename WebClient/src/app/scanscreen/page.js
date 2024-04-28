@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Bgrecycle from "./../../../public/assets/bgrecycle.jpg";
-import Navbar from "@/components/navbar/Navbar";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -48,7 +47,6 @@ export default function page() {
   }
   return (
     <>
-      <Navbar />
       <div
       className="relative min-h-screen flex justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover items-center"
       style={{ backgroundImage: `url(${Bgrecycle.src})` }}
