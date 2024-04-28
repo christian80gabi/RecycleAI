@@ -42,7 +42,7 @@ A waste management & recycling copilot addressing a solution at some of the Sust
 | GitHub                                                 | DevPost                                    | Country  |
 | :----------------------------------------------------- | :----------------------------------------- | :------- |
 | @[Divina-s](https://github.com/Divina-s)               | https://devpost.com/ghiibemsitiambel       | Cameroon |
-| @[yll0rd](https://github.com/yll0rd)                   | https://devpost.com/Leo-Youmbi             | Cameroon |
+| @[yll0rd](https://github.com/yll0rd)                   | https://devpost.com/yll0rd                 | Cameroon |
 | @[munene-m](https://github.com/munene-m)               | https://devpost.com/MacMillan-dev          | Kenya    |
 | @[Banitongwa7](https://github.com/Banitongwa7)         | https://devpost.com/davidbanitongwa        | DRC      |
 | @[7H3XXX](https://github.com/7H3XXX)                   | https://devpost.com/7H3XXX                 | Cameroon |
