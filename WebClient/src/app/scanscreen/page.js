@@ -4,6 +4,8 @@ import Image from "next/image";
 import Bgrecycle from "./../../../public/assets/bgrecycle.jpg";
 import Navbar from "@/components/navbar/Navbar";
 import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function page() {
     const [image, setImage] = React.useState(null);
@@ -13,9 +15,14 @@ export default function page() {
     const file = event.target.files[0];
     // check if file is an image jpg, jpeg, png, or webp
     if (!file.type.startsWith("image/") || !file.name.endsWith(".jpg") && !file.name.endsWith(".jpeg") && !file.name.endsWith(".png") && !file.name.endsWith(".webp")) {
-      alert("Please select an image file (jpg, jpeg, png, or webp).");
+      toast.error("Please select an image file (jpg, jpeg, png, or webp)", {
+        position: "bottom-right",
+      });
     }else {
       setImage(file);
+      toast.success("Image selected successfully", {
+        position: "bottom-right",
+      }); 
     }
   };
   
@@ -113,6 +120,7 @@ export default function page() {
         </form>
       </div>
     </div>
+    <ToastContainer />
     </>
   );
 }
