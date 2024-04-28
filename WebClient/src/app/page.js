@@ -48,7 +48,7 @@ export default function Home() {
         </h3>
         <div className="bg-primary-green text-center py-16 mt-4 rounded-xl">
           <p className="text-6xl font-semibold mb-3">Earn 5 points</p>
-          <p>and recycle a plastic bottle...</p>
+          <p>and recycle a plastic bottle to earn rewards.</p>
         </div>
       </div>
       <div className="mt-16">
