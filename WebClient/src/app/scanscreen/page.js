@@ -1,34 +1,28 @@
 import React from "react";
 import Image from "next/image";
+import Bgrecycle from "./../../../public/assets/bgrecycle.jpg";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function page() {
   return (
-    <div
+    <>
+      <Navbar />
+      <div
       className="relative min-h-screen flex justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover items-center"
-      style={{ backgroundImage: `url("https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80")` }}
+      style={{ backgroundImage: `url(${Bgrecycle.src})` }}
     >
       <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
       <div className="sm:max-w-lg w-full p-10 bg-white rounded-xl z-10">
         <div className="text-center">
-          <h2 className="mt-5 text-3xl font-bold text-gray-900">File Upload!</h2>
+          <h2 className="mt-5 text-3xl font-bold text-gray-900">Scan your waste with AI</h2>
           <p className="mt-2 text-sm text-gray-400">
-            Lorem ipsum is placeholder text.
+            Insert the image you want to scan with AI
           </p>
         </div>
         <form className="mt-8 space-y-3" action="#" method="POST">
           <div className="grid grid-cols-1 space-y-2">
             <label className="text-sm font-bold text-gray-500 tracking-wide">
-              Title
-            </label>
-            <input
-              className="text-base p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
-              type="text"
-              placeholder="mail@gmail.com"
-            />
-          </div>
-          <div className="grid grid-cols-1 space-y-2">
-            <label className="text-sm font-bold text-gray-500 tracking-wide">
-              Attach Document
+              Attach image
             </label>
             <div className="flex items-center justify-center w-full">
               <label className="flex flex-col rounded-lg border-4 border-dashed w-full h-60 p-10 group text-center">
@@ -62,7 +56,7 @@ export default function page() {
                     <a href="" id="" className="text-blue-600 hover:underline">
                       select a file
                     </a>{" "}
-                    from your computer
+                    from your device
                   </p>
                 </div>
                 <input type="file" className="hidden" />
@@ -70,19 +64,20 @@ export default function page() {
             </div>
           </div>
           <p className="text-sm text-gray-300">
-            <span>File type: doc,pdf,types of images</span>
+            <span>File type: types of images</span>
           </p>
           <div>
             <button
               type="submit"
-              className="my-5 w-full flex justify-center bg-blue-500 text-gray-100 p-4  rounded-full tracking-wide
-                                    font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300"
+              className="my-5 w-full flex justify-center bg-green-700 text-gray-100 p-4  rounded-full tracking-wide
+                                    font-semibold  focus:outline-none focus:shadow-outline hover:bg-green-600 shadow-lg cursor-pointer transition ease-in duration-300"
             >
-              Upload
+              Scan now
             </button>
           </div>
         </form>
       </div>
     </div>
+    </>
   );
 }
