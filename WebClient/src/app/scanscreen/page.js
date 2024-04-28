@@ -1,9 +1,44 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Bgrecycle from "./../../../public/assets/bgrecycle.jpg";
 import Navbar from "@/components/navbar/Navbar";
+import { useRouter } from "next/navigation";
 
 export default function page() {
+    const [image, setImage] = React.useState(null);
+    const router = useRouter();
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    // check if file is an image jpg, jpeg, png, or webp
+    if (!file.type.startsWith("image/") || !file.name.endsWith(".jpg") && !file.name.endsWith(".jpeg") && !file.name.endsWith(".png") && !file.name.endsWith(".webp")) {
+      alert("Please select an image file (jpg, jpeg, png, or webp).");
+    }else {
+      setImage(file);
+    }
+  };
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("image", image);
+
+    console.log(formData);
+    fetch("http://127.0.0.1:8000/api/1.0/analyze-picture", {
+      method: "POST",
+      body: formData,
+    }).then((response) => {
+      response.json().then((data) => {
+        console.log(data);
+        console.log(data.message);
+        console.log(data.data);
+        console.log(data.url);
+        // Redirect to another page
+        router.push("/scanresult");
+    })
+    })
+  }
   return (
     <>
       <Navbar />
@@ -59,12 +94,12 @@ export default function page() {
                     from your device
                   </p>
                 </div>
-                <input type="file" className="hidden" />
+                <input type="file" className="hidden" onChange={handleImageChange}/>
               </label>
             </div>
           </div>
           <p className="text-sm text-gray-300">
-            <span>File type: JPG, PNG</span>
+            <span>File type: JPG, PNG, WEBP, JPEG</span>
           </p>
           <div>
             <button
